@@ -22,7 +22,7 @@ class Artist
 
   def self.find_or_create_by_name(name)
     if self.all.detect {|artist| artist.name == name}
-      artist = self.name
+      artist = self
     else
       artist = Artist.new(name)
       artist.save
